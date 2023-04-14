@@ -1,0 +1,39 @@
+Algoritmo NUM_ASTERISCO
+	
+/// Realizar un programa que lea 5 números (comprendidos entre 1 y 20) e imprima el número ingresado seguido de tantos asteriscos como indique su valor. Por ejemplo:
+	
+	Definir x1, X2, X3, X4, X5, k Como Entero
+	Escribir " "
+	Escribir "Ingresa un numero el 1 al 20"
+	Leer x1
+	Leer x2
+	Leer x3
+	Leer x4
+	Leer x5
+	Escribir " "
+	Escribir sin saltar x1
+	Para k <- 1 hasta x1 con paso 1 Hacer
+		Escribir sin saltar "*"
+	FinPara
+	Escribir " "
+	Escribir sin saltar x2
+	para k <- 1 hasta x2 con paso 1 Hacer
+		Escribir sin saltar "*"
+	FinPara
+	Escribir " "
+	Escribir sin saltar x3
+	para k <- 1 hasta x3 con paso 1 Hacer
+		Escribir sin saltar "*"
+	FinPara
+	Escribir " "
+	Escribir sin saltar x4
+		para k <- 1 hasta x4 con paso 1 Hacer
+		Escribir sin saltar "*"
+	FinPara
+	Escribir " "
+	Escribir sin saltar x5
+	para k <- 1 hasta x5 con paso 1 Hacer
+		Escribir sin saltar "*"
+	FinPara
+		
+FinAlgoritmo

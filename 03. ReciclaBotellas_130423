@@ -1,0 +1,84 @@
+Algoritmo sin_titulo
+	
+	/// sistema para una máquina de reciclaje de botellas automátic
+	// Necesitamos crear un sistema para una máquina de reciclaje de botellas automática. Dicha
+	// máquina nos pagará dinero por la cantidad de plástico reciclado. Tenemos que ingresar
+	// nuestro usuario y contraseña para que se nos cargue el saldo por sistema a nuestra
+	// cuenta.
+// Condición simple anidada: validaremos que el usuario sea "Albus_D", luego si esto es
+// verdadero, validaremos si la contraseña es "caramelosDeLimon". Si la contraseña es
+// correcta haremos que una variable llamada Login sea verdadera.
+	
+	Definir usu, cont, ulogin, upass, opc, aceptar como cadena
+	Definir login Como Logico
+	Definir intentos, botellas,i, peso Como entero
+	usu <- "Albus_D"
+	cont <- "caramelosDeLimon"
+	login <- Falso
+	intentos <-0
+	Escribir "Bienvenido ¨-----LOGIN----"
+	Mientras intentos < 3 y login = falso Hacer
+		Escribir "INGRESE SU USUARIO"
+		Leer ulogin
+		Escribir "INGRESE CONTRASEÑA"
+		Leer upass
+		Si (ulogin == usu ) Entonces
+			si (upass == cont) Entonces
+				login <- Verdadero
+			SiNo
+				Escribir "La contraseña es incorrecta"
+			FinSi
+		Sino	 
+			ESCRIBIR "El Usuario es incorrecto"
+		FinSi
+	FinMientras
+	si (login == verdadero) entonces 
+		repetir
+			escribir("Menú de opciones:")
+			escribir("1. Ingresar botellas")
+			escribir("2. Consultar saldo")
+			escribir("3. Salir")
+			escribir("Ingrese su opción: ")
+			leer opc
+			Si (opc = "1") entonces
+				escribir("Cuantas botellas desea ingresar?")
+				leer botellas
+				para i <- 1 hasta botellas hacer
+					peso := aleatorio(100, 3000)
+					si (peso < 500) entonces
+						escribir ("Se le ofrece $50 por esta botella. ¿Acepta? (Escriba *S* para SI o *N* para NO)")
+						leer aceptar
+						si (aceptar = "S") entonces
+							saldo := saldo + 50
+						sino
+							escribir("Devolviendo material")
+						finsi
+					sino
+						si (peso >= 501) y (peso <= 1500) entonces
+							escribir("Se le ofrece $125 por esta botella. ¿Acepta? (Escriba *S* para SI o *N* para NO)")
+							leer aceptar
+							si (aceptar = "S") entonces
+								saldo := saldo + 125
+							sino
+								escribir("Devolviendo material")
+							finsi
+						sino
+							escribir("Se le ofrece $200 por esta botella. ¿Acepta? (S/N)")
+							leer aceptar
+							si (aceptar = "S") entonces
+								saldo := saldo + 200
+							sino
+								escribir("Devolviendo material")
+							finsi
+						finsi
+					FinSi
+				FinPara
+			FinSi
+			Si (opc = "2") entonces
+				Escribir "SU SALDO ES DE $ " saldo
+			FinSi
+		Hasta Que 	opc = "3"
+		Escribir "CERRANDO SESION"
+	FinSi
+	
+FinAlgoritmo

@@ -1,0 +1,18 @@
+Algoritmo CONT_DIGITOS
+	
+/////  Escribir un programa que lea un número entero y devuelva el número de dígitos que
+/////  componen ese número. Por ejemplo, si introducimos el número 12345, el programa
+/////  	deberá devolver 5. Calcular la cantidad de dígitos matemáticamente utilizando el operador
+/////  	de división.
+	
+	Definir num, dig como entero
+	Escribir "Escribe un numero"
+	leer num
+	dig <- 0
+	mientras num >= 1 Hacer
+		num <- trunc(num/10)
+		dig<- dig + 1
+	FinMientras
+	Escribir "El numero tiene;" dig " digitos"
+	
+FinAlgoritmo
