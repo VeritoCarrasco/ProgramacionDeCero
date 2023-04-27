@@ -1,0 +1,57 @@
+Algoritmo Ejercicio_2
+	
+	Definir vector, num, i Como real
+	definir op Como Entero
+	dimension vector(10)
+	
+	Escribir "Ingrese los números"
+	
+	Para i <- 0 Hasta 9 Con Paso 1 Hacer
+		
+		leer vector(i)
+		
+	Fin Para
+	
+	
+	Escribir "¿Qué operación matematica deseas realizar?, 1= Suma 2= Resta 3= Multiplicación"
+	leer op
+	
+	Segun op Hacer
+		1:
+			suma(vector)
+		2:
+			resta(vector)
+		3:
+			multi(vector)
+	Fin Segun
+	
+	
+FinAlgoritmo
+SubProceso suma(vector Por Referencia)
+	Definir sum, i como real 
+	sum <- 0
+	para i <- 0 Hasta 9 Hacer
+		sum <- sum + vector(i)
+	FinPara
+	Escribir "El resultado de la suma es: ",sum
+	
+FinSubProceso
+
+SubProceso resta(vector Por Referencia)
+	Definir rest, i como real 
+	rest <- 0
+	para i <- 0 Hasta 9 Hacer
+		rest <- rest - vector(i)
+	FinPara
+	Escribir "El resultado de la resta es: ",rest
+FinSubProceso
+
+SubProceso multi(vector Por Referencia)
+	Definir mul, i como real 
+	mul <- 1
+	para i <- 0 Hasta 9 Hacer
+		mul <- mul * vector(i)
+	FinPara
+	Escribir "El resultado de la multiplicación es: ",mul
+	
+FinSubProceso
