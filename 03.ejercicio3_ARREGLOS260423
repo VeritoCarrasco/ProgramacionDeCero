@@ -1,0 +1,37 @@
+Algoritmo ejercicio3
+	//	Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
+	//	usuario. A continuación, se debe buscar un elemento dentro del arreglo (el número a buscar
+	//	también debe ser ingresado por el usuario). El programa debe indicar la posición donde se
+	//	encuentra el valor. En caso que el número se encuentre repetido dentro del arreglo se deben
+	//	imprimir todas las posiciones donde se encuentra ese valor.
+	//	Finalmente, en caso que el número a buscar no está adentro del arreglo se debe mostrar un
+	//mensaje.
+	
+	Definir i, tamano, num, vector Como Entero
+	Escribir "Ingrese la longitud de caracteres deseados: "
+	leer tamano
+	Dimension vector[tamano]
+	Escribir "Ingrese los valores segun la longitud determinada: "
+	
+	para i<-0 hasta tamano-1 con paso 1 Hacer
+		leer vector[i]
+	FinPara
+	
+	bus(vector, tamano)
+	
+FinAlgoritmo
+
+SubProceso bus(vector Por Referencia, tamano Por Referencia)
+	Definir busqueda, i Como Entero
+	Escribir "Ingrese el número a buscar: "
+	leer busqueda
+	
+	para i<-0 Hasta tamano-1 con paso 1 Hacer
+		si vector[i]=busqueda 
+			Escribir "El número ingresado está en la posición: " i 
+		SiNo
+			Escribir Sin Saltar "" 
+		FinSi
+	FinPara
+FinSubProceso
+	
